@@ -24,6 +24,7 @@ cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
 cnts = imutils.grab_contours(cnts)
 
 # loop over the contours
+i = 0
 for c in cnts:
 	# compute the bounding box of the contour and then draw the
 	# bounding box on both input images to represent where the two
@@ -31,9 +32,10 @@ for c in cnts:
 	(x, y, w, h) = cv2.boundingRect(c)
 	cooX = (x+(w/2))
 	cooY = (y-(h/2))
-	print("coordination="+str(cooX)+","+str(cooY))
+	print("coordination("+str(i)+") ="+str(cooX)+","+str(cooY))
 	cv2.rectangle(imageA, (x, y), (x + w, y + h), (0, 0, 255), 2)
 	cv2.rectangle(imageB, (x, y), (x + w, y + h), (0, 0, 255), 2)
+	i = i + 1
  
 # show the output images
 cv2.imshow("input-left", imageA)
