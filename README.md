@@ -1,5 +1,5 @@
 # Mark-The-Differences-Between-Two-Images
-This project will find the differences between two images and draw rectangles over the extracted differences using opencv 
+This project will find the differences between two images and draw rectangles over the extracted differences and print the center of each difference using opencv 
 
 ## How to Install
 1. Clone Project to your local directory (`clone https://github.com/najeebael/Mark-The-Differences-Between-Two-Images`)
